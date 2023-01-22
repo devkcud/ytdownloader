@@ -12,14 +12,25 @@ cd ytdownloader
 
 **ATTENTION:** Before running the script or running `make`, change the _DOWNLOAD_FOLDER_ at [ytd.py](ytd.py) to a directory that exists on your system, otherwise it won't download correctly (might break).
 
-After patching run:
+After patching, you can install locally or in the binaries folder (_/usr/local/bin_).
+
+System:
 ```bash
 make
+# or
+make install
+```
+
+Local:
+```bash
+make transform
+./ytdp
 ```
 
 To delete the script run:
 ```bash
-make clean
+make clean # Local
+make uninstall # System
 ```
 
 ## Configuration
