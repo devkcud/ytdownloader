@@ -28,8 +28,9 @@ Formatting:
     > Playlist title template: {PLAYLIST_TITLE_TEMPLATE}
     > Video name template: {VIDEO_NAME_TEMPLATE}
 
-Sizing:
-    > Playlist videos quantity: {len(playlist)}
+Extra:
+    > Playlist size:  {playlist.length} videos
+    > Playlist owner: {playlist.owner}
 ''')
 
     if input('Start download? (Y/n) ').lower() or 'y' == 'n': exit()
@@ -49,4 +50,4 @@ Sizing:
         except:
             print(f'[ERRO] Could not download: {video_name} ({video_url})')
 
-download_playlist('https://www.youtube.com/playlist?list=PLhWBaV_gmpGXxscZr8PIcreyYkw8VlnKn')
+download_playlist()
