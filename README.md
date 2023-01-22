@@ -5,19 +5,22 @@ A simple python script for downloading playlist (as .mp3).
 
 ## Dependencies
 
-- git      >= 2.39.1
-- python   >= 3.10.9
-- pip      >= 22.3.1
-- GNU Make >= 4.4
+```txt
+# deps
+Git      >= 2.39.1
+Python   >= 3.10.9
+pip      >= 22.3.1
+GNU Make >= 4.4
 
-### pip
+#  pip deps
+pytube   >= 12.1.2
+```
 
 To install the requirements run:
-```
+
+```bash
 pip install -r requirements.txt
 ```
-
-- pytube >= 12.1.2
 
 ## Build
 
@@ -31,6 +34,7 @@ cd ytdownloader
 After patching, you can install locally or in the binaries folder (_/usr/local/bin_).
 
 System:
+
 ```bash
 make
 # or
@@ -38,12 +42,14 @@ make install
 ```
 
 Local:
+
 ```bash
 make transform
 ./ytdp
 ```
 
 To delete the script run:
+
 ```bash
 make clean # Local
 make uninstall # System
