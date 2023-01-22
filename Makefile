@@ -14,7 +14,7 @@ install: transform
 	sudo mv $(EXEC) $(USR_BIN)
 
 uninstall:
-	if [ -f $(USR_BIN)$(EXEC) ]; then sudo rm $(USR_BIN)$(EXEC); fi
+	-sudo rm $(USR_BIN)$(EXEC)
 
 clean:
 	-rm $(EXEC)
