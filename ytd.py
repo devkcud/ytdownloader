@@ -3,7 +3,7 @@ from pytube import YouTube, Playlist
 DOWNLOAD_FOLDER = "/home/pato/Videos/"
 
 # Available templates: (playlisttitle) (videoname) (videoindex)
-VIDEO_NAME_TEMPLATE = "(playlisttitle)_(videoindex)"
+VIDEO_NAME_TEMPLATE = "(videoindex)"
 # Available templates: (title)
 PLAYLIST_TITLE_TEMPLATE = "(title)"
 
@@ -39,8 +39,12 @@ Extra:
     for video_url in playlist:
         index += 1
 
-        ytObj = YouTube(video_url)
-        video_name = VIDEO_NAME_TEMPLATE.replace('(playlisttitle)', playlist_title).replace('(videoname)', ytObj.title.replace(' ', '')).replace('(videoindex)', str(index))
+        try:
+            ytObj = YouTube(video_url)
+            video_name = VIDEO_NAME_TEMPLATE.replace('(playlisttitle)', playlist_title).replace('(videoname)', ytObj.title.replace(' ', '')).replace('(videoindex)', str(index))
+        except:
+            print(f'[ERRO] Could not load video: {video_url}')
+            continue
 
         print(f'[INFO] Downloading {video_name}.mp3 ({video_url})')
 
