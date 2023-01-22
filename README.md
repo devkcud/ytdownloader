@@ -39,6 +39,7 @@ System:
 make
 # or
 make install
+ytdp
 ```
 
 Local:
