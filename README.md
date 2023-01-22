@@ -24,7 +24,7 @@ make clean
 
 ## Configuration
 
-You can change the _VIDEO_NAME_TEMPLATE_ and _PLAYLIST_TITLE_TEMPLATE_:
+You can change the _VIDEO_NAME_TEMPLATE_ and _PLAYLIST_TITLE_TEMPLATE_ variables inside the [ytd.py](ytd.py).
 
 Example _VIDEO_NAME_TEMPLATE_:
 ```python
