@@ -3,6 +3,22 @@
 A simple python script for downloading playlist (as .mp3).  
 > Made for linux (might work on Windows after patching)
 
+## Dependencies
+
+- git      >= 2.39.1
+- python   >= 3.10.9
+- pip      >= 22.3.1
+- GNU Make >= 4.4
+
+### pip
+
+To install the requirements run:
+```
+pip install -r requirements.txt
+```
+
+- pytube >= 12.1.2
+
 ## Build
 
 ```bash
