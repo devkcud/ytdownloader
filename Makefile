@@ -1,6 +1,8 @@
 EXEC = ytdp
+# HARDCODED (change if needed):
+USR_BIN = /usr/local/bin/
 
-all: transform
+all: install
 
 transform:
 	cp ytd.py $(EXEC)
@@ -8,5 +10,12 @@ transform:
 	sed -i "1 i\#\!/bin/python" $(EXEC)
 	chmod u+x $(EXEC)
 
+install: transform
+	sudo mv $(EXEC) $(USR_BIN)
+
+uninstall:
+	if [ -f $(USR_BIN)$(EXEC) ]; then sudo rm $(USR_BIN)$(EXEC); fi
+
 clean:
 	-rm $(EXEC)
+
