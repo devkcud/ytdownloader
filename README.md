@@ -36,16 +36,14 @@ After patching, you can install locally or in the binaries folder (_/usr/local/b
 System:
 
 ```bash
-make
-# or
-make install
+make global
 ytdp
 ```
 
 Local:
 
 ```bash
-make transform
+make local
 ./ytdp
 ```
 
